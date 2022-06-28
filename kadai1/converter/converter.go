@@ -23,7 +23,7 @@ func Convert() error {
 		if info.IsDir() {
 			return nil
 		}
-		if filepath.Ext(path) == ".jpg" {
+		if filepath.Ext(path) == ".jpg" || filepath.Ext(path) == ".jpeg" {
 			j, err := os.Open(path)
 			if err != nil {
 				return err
