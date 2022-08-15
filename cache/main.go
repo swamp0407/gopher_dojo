@@ -1,7 +1,21 @@
 package cache
 
-import "sync"
+import (
+	"sync"
+)
 
+// """使いかた"""
+// func main() {
+// 	cache := NewCacheSlice(10)
+// 	cache.Set(1, 1)
+// 	cache.Set(2, 2)
+// 	cache.Set(3, 3)
+// 	cache.Set(4, 4)
+
+// 	fmt.Println(cache.Get(1))
+
+//		cache.Delete(1)
+//	}
 type cacheSlice struct {
 	items map[int]int
 	sync.RWMutex
